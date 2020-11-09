@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính S hình tròn</title>
+</head>
+<body>
+    <div id="warpper">
+    <h3>Tính chu vi - diện tích hình tròn</h3>
+    <p>Nhập bán kính hình tròn: <input type="number"  id="radius" placeholder="Circle radius" value="0"  onkeyup="tan()" /></p>
+    <p>Chu vi hình tròn là: <span id="circumference">0</span></p>
+    
+    <p>Diện tích hình tròn là: <span id="acreage">0</span></p>
+    </div>
+    <script type="text/javascript">
+        function tan(){
+            var r = document.getElementById("radius").value;
+            var circumferenceOfCircle = 2*3.14*r;
+            document.getElementById("circumference").innerText = circumferenceOfCircle;
+
+            var acreageOfCircle = 3.14*r*r;
+            document.getElementById('acreage').innerText = acreageOfCircle;
+        }
+    </script>
+    
+</body>
+</html>
