@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ứng dụng chuyển đổi tiền tệ</title>
+</head>
+<body>
+    <form>
+    
+    <table>
+    
+        <form action="">
+            <th>
+                <h1>Amount </h1>
+                <input type="text" id="input" >
+            </th>
+            <th>
+             <h1>From Currency</h1> 
+             <select name="from" id="from">
+                <option value="VietNam" >Việt Nam</option>
+                <option value="USA"> Mĩ</option>
+            </select>
+           </th>
+
+           <th>
+            <h1>To Currency</h1> 
+            <select name="to" id="to">
+                <option value="USA"> USA</option>
+                <option value="VietNam" >Việt Nam</option>
+           </select>
+          </th>
+           <th>
+                
+    </th>
+    </form>
+</table>
+<th>
+                 
+    <button type="button" onclick="convert();" value="result">convert</button>
+
+</th>
+<div id="result">Result:</div>
+<script>
+    let input = document.getElementById('input');
+        let from = document.getElementById('from');
+        let to = document.getElementById('to');
+        let result = document.getElementById('result')
+        let Price = {
+                        VietNam: 23000,
+                        USA: 1
+
+                         };
+
+                function convert() {
+                    // console.log('')
+                let fromto = from.value + "_" + to.value;
+                switch (fromto) {
+                case "VietNam_VietNam":
+                    result.innerHTML = "=" + input.value + " " + "VNĐ";
+                    break;
+                case "VietNam_USA":
+                    result.innerHTML = "=" + input.value / 23000 + " " + "USA";
+                    break;
+                case "USA_VietNam":
+                    result.innerHTML = "=" + input.value * 23000 + " " + "VND";
+                    break;
+                case "USA_USA":
+                    result.innerHTML = "=" + input.value + " " + "USA";
+                    break;
+                }
+            }
+
+
+     
+          
+
+
+</script>
+</body>
+</html>
