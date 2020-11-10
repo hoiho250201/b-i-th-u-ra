@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ứng Dụng Máy Tính</title>
+</head>
+<body>
+    <form action="">
+        <th>
+            <h1>Caculator</h1>
+            <input type="text" id="input1">
+            <input type="text" id="input2">
+        </th>
+    </form>
+    <th>
+        <button type="button" onclick="cong();" value="Addition">Addition(+)</button>
+        <button type="button" onclick="tru();" value="Addition">Subtraction(-)</button>
+        <button type="button" onclick="nhan();" value="Addition">Multiplication(X)</button>
+        <button type="button" onclick="chia();" value="Addition">Disvision(/)</button>
+    </th>
+    <div id="result">
+ </div>
+ <script>
+     let input1=document.getElementById('input1')
+     let input2=document.getElementById('input2')
+     let result=document.getElementById('result')
+     function cong() {
+            let input3 = parseFloat(input1.value);
+            let input4 = parseFloat(input2.value);
+            let tong = parseFloat(input3 + input4);
+            result.innerHTML = "=" + tong;
+        }
+        function tru() {
+            let input3 = parseFloat(input1.value);
+            let input4 = parseFloat(input2.value);
+            let tru = parseFloat(input3 - input4);
+            result.innerHTML = "=" + tru;
+        }
+        function nhan() {
+            let input3 = parseFloat(input1.value);
+            let input4 = parseFloat(input2.value);
+            let nhan = parseFloat(input3 * input4);
+            result.innerHTML = "=" + nhan;
+        }
+        function chia() {
+            let input3 = parseFloat(input1.value);
+            let input4 = parseFloat(input2.value);
+            let chia = parseFloat(input3 / input4);
+            result.innerHTML = "=" + chia;
+        }
+ </script>
+</body>
+</html>
